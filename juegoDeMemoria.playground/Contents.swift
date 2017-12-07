@@ -11,8 +11,10 @@ for numeros in 0...100 {
     
     switch numeros {
     
-    case num where num >= 30 && num <= 40:
-        print("\(num)\tViva Swift!!!")
+    case num where (num >= 30 && num <= 40) && num % 2 == 0:
+        print("\(num)\tViva Swift!!!\tPar")
+    case num where (num >= 30 && num <= 40) && num % 2 != 0:
+        print("\(num)\tViva Swift!!!\tImpar")
     case num where num % 5 == 0 && num % 2 == 0:
          print("\(num)\tBingo!!!\tPar")
     case num where num % 5 == 0 && num % 2 != 0:
