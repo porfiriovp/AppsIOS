@@ -1,23 +1,28 @@
-//: Playground - noun: a place where people can play
+//Proyecto Juego de Memoria
 
 import UIKit
 
-var numeros = 0...100
-numeros.count
 
-for num in numeros {
+
+for numeros in 0...100 {
     
-    switch num {
-    case 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100:
-        print("Bingo!!!")
-    case 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44:
-        print("Par")
-    case 1, 3, 5, 7, 9, 11:
-            print("Impar")
-    case 18...27:
-        print("Viva Swift!!!")
+    var num = numeros;
+    
+    
+    switch numeros {
+    
+    case num where num >= 30 && num <= 40:
+        print("\(num)\tViva Swift!!!")
+    case num where num % 5 == 0 && num % 2 == 0:
+         print("\(num)\tBingo!!!\tPar")
+    case num where num % 5 == 0 && num % 2 != 0:
+        print("\(num)\tBingo!!!\tImPar")
+    case num where num % 2 == 0:
+        print("\(num)\tPar")
+    case num where num % 2 != 0:
+        print("\(num)\tImpar")
     default:
-        print("no existe el numero")
+        print("\(num)\tno existe el numero")
     }
     }
 
